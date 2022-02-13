@@ -1,0 +1,112 @@
+*, *::before, *::after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --red: #EB5A54;
+    --accent-red: #f7928f;
+    --yellow: #F6D74F;
+    --accent-yellow: #ffea8c;
+    --dark-yellow: #cab039;
+}
+
+html {
+    font-size: 10px;
+    background-color: var(--yellow);
+}
+
+body {
+    max-width: 60rem;
+    margin: 0 auto;
+    height: 100vh;
+}
+
+header {
+    margin-top: 10%;
+    text-align: center;
+    color: var(--red);
+    margin-bottom: 5rem;
+}
+
+.title {
+    font-family: "Roboto", "Helvetica Neue", sans-serif;
+    font-size: 5rem;
+    margin-bottom: 6rem;
+}
+
+.subtext {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1.5rem;
+    color: rgb(56, 57, 63);
+}
+
+.subtext span {
+    font-weight: 900;
+}
+
+.gameboard {
+    position: relative;
+    background-color: rgb(255, 255, 255);
+    width: 100%;
+    padding-top: 100%;
+    border-radius: 5px;
+}
+
+.squares {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: 1rem;
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1rem;
+    border-radius: 5px;
+}
+
+.square {
+    position: relative;
+    background-color: rgb(162, 206, 221);
+    border-radius: 4px;
+}
+
+.square:hover {
+    cursor: pointer;
+    background-color: rgb(142, 191, 208);
+}
+
+.x-marker {
+    background-color: var(--accent-red);
+    color: var(--red);
+}
+
+.o-marker {
+    background-color: var(accent-yellow);
+    color: var(--dark-yellow);
+}
+
+.x-marker::after {
+    content: 'X';
+    color: var(--red);
+}
+
+.o-marker::after {
+    content: 'O';
+    color: var(--dark-yellow);
+}
+
+.x-marker::after,
+.o-marker::after {
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 8rem;
+    font-weight: 900;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 8rem;
+}
