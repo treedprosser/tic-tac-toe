@@ -11,7 +11,7 @@ const gameBoard = (() => {
 
     let squares = document.querySelector('.squares');
 
-    board.forEach((item, index) => {
+    board.forEach(() => {
         const square = document.createElement('div');
         square.className = 'square';
         squares.appendChild(square);

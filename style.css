@@ -85,7 +85,7 @@ header {
 }
 
 .o-marker {
-    background-color: var(accent-yellow);
+    background-color: var(--accent-yellow);
     color: var(--dark-yellow);
 }
 
