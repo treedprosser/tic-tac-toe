@@ -44,8 +44,8 @@ const gameBoard = (() => {
 
 const game = (() => {
 
-    const playerOne = createPlayer('Player 1', 'x-marker');
-    const playerTwo = createPlayer('Player 2', 'o-marker');
+    const playerOne = createPlayer(window.prompt("Player 1, enter your name: ", "Player 1"), 'x-marker');
+    const playerTwo = createPlayer(window.prompt("Player 2, enter your name: ", "Player 2"), 'o-marker');
 
     let activePlayer = playerOne;
     let winnerDeclared = false;
@@ -53,6 +53,7 @@ const game = (() => {
 
     let subtext = document.querySelector('.subtext');
     let playerName = document.querySelector('.player-name');
+    playerName.textContent = playerOne.name;
 
     const winningAxes = [
         [0,1,2],
@@ -75,7 +76,7 @@ const game = (() => {
     }
 
     function alertNextPlayer() {
-        this.activePlayer === playerOne ? playerName.textContent = 'Player 2' : playerName.textContent = 'Player 1';
+        this.activePlayer === playerOne ? playerName.textContent = playerTwo.name : playerName.textContent = playerOne.name;
     }
 
     function nextPlayer() {
@@ -96,3 +97,8 @@ const game = (() => {
         winnerDeclared
     };
 })();
+
+function reset() {
+    window.location.reload();
+}
+

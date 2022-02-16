@@ -46,6 +46,19 @@ header {
     font-weight: 900;
 }
 
+.reset {
+    margin: 10px;
+    border: none;
+    background-color: var(--accent-red);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.reset:hover {
+    cursor: pointer;
+    background-color: var(--red);
+}
+
 .gameboard {
     position: relative;
     background-color: rgb(255, 255, 255);
